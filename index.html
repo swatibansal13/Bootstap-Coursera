@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginLink">
                         <span class="fa fa-sign-in"></span>Login 
                     </a>
                 </span>
@@ -147,8 +147,8 @@
                 </div>
 
                 <div class="col-12 col-sm-3 align-self-center">
-                    <button type="button" class="btn btn-warning" data-toggle="modal" data-html="true" data-target="#reserveModal" data-placement="bottom"
-                        href="#reserveform">Reserve Table </button>
+                    <button type="button" class="btn btn-warning"  data-html="true" data-placement="bottom"
+                        id="reserveform">Reserve Table </button>
                 </div>
 
             </div>
@@ -196,14 +196,11 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
-                </div>
-                <div class="btn-group" id="carouselButton">
-                    <button class="btn btn-danger btn-sm" id="carousel-pause">
-                	    <span class="fa fa-pause"></span>
+
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span class="fa fa-pause"></span>
                     </button>
-                    <button class="btn btn-danger btn-sm" id="carousel-play">
-                	    <span class="fa fa-play"></span>
-                    </button>
+
                 </div>
             </div>
         </div>
@@ -312,16 +309,7 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $("#mycarousel").carousel( { interval: 2000 } );
-                $("#carousel-pause").click(function(){
-                    $("#mycarousel").carousel('pause');
-                });
-                $("#carousel-play").click(function(){
-                    $("#mycarousel").carousel('cycle');
-                });
-            });
+        <script src="js/scripts.js">                      
         </script>
     
 
